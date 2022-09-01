@@ -1,0 +1,12 @@
+@import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css);
+
+.simpleEditorContainer .control-btn {
+	border: 0px solid transparent;
+	background: lightgrey;
+	outline: none;
+	cursor: pointer;
+}
+
+.control-btn.active {
+	background: grey;
+}

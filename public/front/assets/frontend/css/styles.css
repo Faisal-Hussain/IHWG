@@ -1,0 +1,673 @@
+/*
+::Table Of Content
+=================================
+1.) Global Typography
+2.) Donate Charity form Page
+3.) Transaction Fail Page
+4.) Transaction Successful Page
+5.) Transaction Details Page
+    5a) pop-up csss
+    5b) pop-up csss
+6.) Responsive for tablet Mode
+7.) Responsive for Mobile Mode    
+
+-----------------------------------------------*/
+
+/*
+1.) Global Typography
+-------------------------------------*/
+
+
+body{
+   
+    font-size:18px; color:#4d4641; line-height:1.1;
+}
+.upper{
+    text-transform:uppercase;
+}
+.full{
+    display:inline-block; width:100%;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.dib{ display: inline-block !important;}
+.mb15{ margin-bottom: 15px;}
+.form-container{
+    max-width:880px; width:100%; margin:25px auto;
+    background:#f4f4f4;
+}
+.container2{
+    max-width:880px; width:100%; margin:0 auto;
+    padding:0 20px; box-sizing:border-box;
+}
+em{
+    font-style:italic;
+}
+* {
+    box-sizing: border-box;
+}
+/*
+2.) Donate Charity form Page
+-------------------------------------*/
+
+.donate-heading{
+    background:#4d4641; color:#fff; padding:15px 30px;
+    border-radius:6px 6px 0 0; -webkit-border-radius:6px 6px 0 0;
+}
+.donate-heading h2{
+    display:inline-block; text-align:center; width:86%;
+    font-size:26px; line-height:1; text-indent:112px;
+}
+.donate-heading .lang{
+    float:right;
+}
+.form-content{
+    padding:36px 31px 31px 32px;
+}
+.select-country{
+    text-align:center; 
+    margin-bottom:-3px;
+    margin-bottom:-3px\9;
+}
+
+.content-inner-section{
+    border:1px solid #c6c6c6; background:#fff;
+    /*padding:0px 20px;*/
+}
+fieldset{
+    margin-bottom:25px;
+}
+legend,.pay-mode-heading{
+    font-family: 'latobold'; color:#4d4641; padding-bottom:24px;
+}
+.btn-group .btn{
+    font-family: 'latolight'; margin-right:15px; outline:none;
+}
+.btn, .btn-group input{
+    border-radius:5px ;
+    -webkit-border-radius: 4px ;
+    /* border:1px solid #cfcfcf ; */
+    /* color:#4d4641 ; */
+    padding: 13px ;
+    padding-left: 20px ;
+    padding-right: 20px ;
+    font-size: 18px ;
+    line-height:1 ;
+    cursor:pointer ;
+    transition: all 0.4s ease-in-out 0s ;
+    -webkit-transition: all 0.4s ease-in-out 0s ;
+}
+.btn:hover,.choose-pricing .btn-group .btn.active{
+    outline:none ;
+}
+
+.choose-pricing .btn-group .inpt-first.active{
+    background:#ecc731; 
+}
+.btn-group input{
+    cursor:default; width:90px; 
+}
+.pay-mode-heading{
+    font-family: 'latoregular';
+}
+.money-donate{
+    background:#f4f4f4; border:1px solid #cfcfcf; color:#4d4641; 
+    text-align:center;  border-radius:5px; -webkit-border-radius:5px; font-size:70px; line-height:1;
+    padding:30px 25px; margin-top:16px;
+}
+input[type="radio"]{	 cursor:pointer; margin-top:0;   }
+.radio-wrapper{  border-radius:5px; -webkit-border-radius:5px;  display:inline-block; text-align:center; position:relative;}
+
+.radio-wrapper input[type="radio"]{
+    position:relative; z-index: 10;
+}
+.radio-wrapper.req{
+    width:128px; margin-right:20px;
+}
+.radio-wrapper.req:hover,.radio-wrapper.req.active{
+    border-radius:5px; -webkit-border-radius:5px;
+}
+.radio-wrapper.pay input[type="radio"]{
+    width:217px;
+}
+.radio-wrapper.pay{
+    width:217px;
+}
+.radio-wrapper span{
+    width:100%; box-sizing:border-box; -webkit-box-sizing:border-box;
+    position: absolute; z-index: 9; top:0; left: 0;
+}
+
+.pay-mod span,.radio-wrapper span{
+    background:#48ABF7; border-color:#48ABF7; line-height:1; display:inline-block;
+    margin-right:19px;  padding:12px 10px; min-width: 150px; text-align: center;
+    color: white;
+    border-radius:5px; -webkit-border-radius:5px; cursor:pointer;
+    transition: all 0.4s ease-in-out 0s; -webkit-transition: all 0.4s ease-in-out 0s;	
+}
+.pay-mod span i{ margin-top: 5px;}
+.pay-mod span:hover,.pay-mod span.active,.radio-wrapper span:hover,.radio-wrapper.active span{
+     border-color:#0a68af;
+}
+.credit-card-num{
+    position: relative; margin-top:16px;
+}
+#creditCardImage{
+    position: absolute; right:8px; top:8px; display:none;
+}
+#creditCardNumber{
+    width:100%; padding:0px 7px; border:1px solid #cfcfcf; border-radius:5px; -webkit-border-radius:5px;
+    height:42px; line-height:1; color:#4d4641;  box-sizing:border-box; -webkit-box-sizing:border-box;	
+}
+#creditCardNumber placeholder{
+    color:#000;
+}
+
+/*  Form Section  */
+.personal-detail{
+    display:inline-block; width:100%;
+}
+.personal-detail .row{
+    margin-bottom:17px;
+}
+.personal-detail input[type="text"]:focus,.personal-detail textarea:focus{
+    /*background:#ecc731; border-color:#ecc731;*/
+}
+.personal-detail input[type="text"],.personal-detail textarea,.cvn input{
+    background-color:#f4f4f4; border-radius:5px; -webkit-border-radius:5px; border:1px solid #cfcfcf;
+    height:42px; padding:5px 10px; color:#4d4641; font-size:18px; line-height:1;  font-family: 'latolight';
+    font-weight:normal;	
+}
+.personal-detail input[type="text"],.cvn input{
+    line-height:28px\0/; 
+}
+#creditCardNumber{
+    line-height:38px\0/;
+}
+.personal-detail input[type="text"]{ width:48.5%; box-sizing:border-box; -webkit-box-sizing:border-box;}
+
+.personal-detail  textarea{
+    width:100%; box-sizing:border-box; resize:none;  padding:8px 10px; font-family: 'latolight';
+}
+#add-note{
+    margin:15px 0; height:84px;
+}
+.personal-detail input[type="button"]{
+    background-color:#4d4641; color:#ffffff; font-size:20px;
+    border:none; transition: all 0.4s ease-in-out 0s; -webkit-transition: all 0.4s ease-in-out 0s;
+}
+.personal-detail input[type="button"]:hover{
+    background:#ecc731;
+}
+.button{ 
+    text-align:center;
+}
+#donate-btn{
+    padding:10px 15px;
+}
+
+
+/*  Selectbox */
+
+
+
+/*
+3.) Transaction Fail Page
+-------------------------------------*/
+
+.payment-fail{
+    padding-top:135px; text-align:center;
+}
+.payment-fail h2,.payment-success-box h2{
+    color:#4d4641; font-size:58px; line-height:1.2;
+    font-family: 'latoregular';
+}
+.click-section{
+    padding-top:54px; padding-bottom:10px;
+}
+.btn-yellow{
+    text-decoration:none; display:inline-block;
+    background:#ecc731; font-family: 'latobold';
+    border:2px solid #ecc731; 
+    padding:9px 16px;
+}
+.btn-yellow:hover{
+    background:#fff;
+    border-color:#000;
+
+}
+/*
+4.) Transaction Successful Page
+-------------------------------------*/
+.payment-success-box{
+    text-align:center; padding-top:96px; padding-bottom:30px;
+}
+.transition-content{
+    width:655px; margin:0 auto; 
+    padding:47px 20px;
+    color:#4d4641; font-size:16px; line-height:1.3;
+}
+.transition-content .name{ margin-bottom:15px;}
+.transition-detail{
+    border:1px solid #cdcdcd; padding:10px 23px;
+    margin-top:24px; border-radius:2px; -webkit-border-radius:2px;
+}
+.transition-detail p{
+    text-align:left; padding-bottom:5px;
+}
+.transition-detail a{
+    text-decoration:none; color:#4d4641;
+}
+
+.donate-value-section{
+    padding:0 8px; overflow: hidden;
+    margin-top:12px;
+}
+.donate-value-section a{
+    text-decoration:none; color:#4d4641;
+    padding:10px; border:1px solid #cdcdcd;
+    border-bottom:none; border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0;
+    transition:all 0.4s ease-in-out 0s; -webkit-transition:all 0.4s ease-in-out 0s;
+
+
+}
+
+.donate-value-section a.active{
+    padding:14px 10px;
+}
+.donate-value-section span a{
+    display: inline-block; float:left;
+    margin-top:8px;
+}
+.donate-value-section span a+a.last{
+    border-left:none;
+}
+.donate-value-section a:hover{
+    background:#ecc731;
+}
+.transition-detail .money-donate{
+    margin-top:0;	 margin-bottom:20px;
+}
+.social {
+    padding:16px; border:1px solid #cdcdcd; border-radius:2px; -webkit-border-radius:2px;
+    margin-top:10px; line-height: 1;
+}
+.social span{
+    line-height:23px; display:inline-block; padding-right:8px;
+    vertical-align: top;
+}
+.social ul{
+    display:inline-block; 
+}
+.social li{
+    display:inline; margin-right:8px;
+    transition: all 0.2s ease-in-out 0s; -webkit-transition: all 0.2s ease-in-out 0s;
+}
+.social li:hover img{
+    transform: scale(1.1);
+}
+
+
+
+/*
+5.) Transaction Details Page
+-------------------------------------*/
+
+.recurring-btn{
+    background:#d3d3d3; border-radius:5px; -webkit-border-radius:5px; color:#4d4641; text-decoration:none;
+    font-size:12px; line-height:26px; width:106px;display:inline-block; text-align:center;  transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+}
+.recurring-btn:hover{
+    background:#ecc731; color:#000;
+}
+.transaction-content a:hover{
+    color:#000;
+}
+.transaction-container {
+    max-width: 875px;
+    width: 100%;
+    margin: 125px auto;
+}
+.header-transition {
+    background-image:url(../images/border-heading.jpg) ;
+    background-position:left bottom;
+    background-repeat:no-repeat;
+    background-color:#4d4641;
+    border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    color: #fff;
+    padding:22px 30px;
+    display: inline-block;
+    width: 100%;
+}
+.header-transition h2 {
+
+    font-size: 26px;
+    line-height: 1.15;
+    float: left;
+}
+.search-transaction {
+    float: right;
+    position: relative;
+}
+#datepicker,#datepicker1{
+    background:#615b57 url(../images/datepicker.png) 92% center no-repeat;
+    width:108px; padding-right:24px; padding-left:10px;
+    cursor:pointer;
+}
+.search-transaction input[type="text"] {
+    width: 170px;
+    height: 35px;
+    padding: 0 37px 0 11px;
+    background: #615b57;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    line-height: 35px;
+    border:1px solid #47403c;
+    float:left;
+}
+::-webkit-input-placeholder {
+    color: white;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: white;
+}
+:-ms-input-placeholder {
+    color: white;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: white;
+}
+.search-btn {
+    position: absolute;
+    right: 11px;
+    bottom: 9px;
+    background: url(../images/search-btn-icon.png) left top no-repeat;
+    border: none;
+    width: 16px;
+    height: 16px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+.transaction-content-wrapper {
+    background: #f4f4f4; padding:52px 31px 33px 32px; width:100%; display:inline-block;	
+}
+.transaction-content{
+    border:1px solid #c6c6c6; display:inline-block; width:100%; background:#fff;
+}
+.total{
+    float:left;padding-left:21px;  font-size:12px; line-height:33px;
+}
+.filter-btn{
+    font-size:12px; border:1px solid #c6c6c6; border-radius:6px 6px 0 0; -webkit-border-radius:6px 6px 0 0;
+    line-height:33px; line-height:33px; display:inline-block; padding:0 10px; cursor:pointer;
+}
+select{ height:33px; border:1px solid #c6c6c6; border-radius:6px 6px 0 0; -webkit-border-radius:6px 6px 0 0;}
+.filter-btn,select{
+    border-bottom:none; 
+}
+.tech{
+    display: none; visibility: hidden !important;
+}
+.transaction-row{
+    border-bottom:1px solid #c6c6c6;  width:100%; display:none; padding:20px; overflow:hidden; box-sizing:border-box; -moz-box-sizing:border-box; -webkit--moz-box-sizing:border-box;}
+.transaction-details{
+    float:left; width:76%;
+}
+.price-box-trans{
+    text-align:center; border:1px solid #eaedef; float:left; width:22%;
+    position:relative; margin-right:15px;
+}	
+.price-box-trans i{
+    background: url(../images/sprite-success.png) left top no-repeat; width:27px; height:27px; display:block;
+    position: absolute; left:0; top:0;
+}
+.price-box-trans i.trans-pending {
+    background-position: 0 -54px;
+}
+.price-box-trans i.trans-failed{ background-position:0 -27px;}
+.price-box-trans .price{ display:block; font-size: 24px; font-family: 'latobold'; line-height: 1; padding: 12px 2px;}
+.price-box-trans .date{ color:#4d4641; font-size:12px; line-height:1; display:block; padding:10px 1px;}
+.view-invoice{	color:#ddbb2e; text-transform:uppercase; text-decoration:none;}
+.view-invoice:hover,.email-order a:hover { color:#000;}
+.name-trans { position: relative; float:left; width:75%; height:82px; left:0;}
+.name-trans h3{ font-size:18px; color:#4d4641; line-height:1.1; padding-top:2px; font-family: 'latobold'; }
+.name-trans .email-order{	position:absolute; bottom:0; font-size:12px; line-height:20px;}
+.email-trans{  text-decoration:none; color:#4d4641;}
+.pay-mod-trans{ text-align:center; font-size:12px; line-height: 26px; padding-right:14px; margin-top:20px;}
+.show-more{ padding:13px 15px 19px 15px;text-align:center; width:100%; display:inline-block; box-sizing:border-box;}
+.show-more span{ color:#4d4641; text-decoration:none; font-size:12px; padding-right:15px; cursor:pointer;
+                 background:url(../images/more-arrow.png) right 5px no-repeat;}
+.show-more span:hover{ 
+    color:#000;}
+
+.select-btn-disable{ 
+    display: none;}
+.bankDetail{
+    width:100%;
+}
+.bankDetail td{ padding:3px; text-align:left; font-size:15px;}
+.bankDetail td strong{ font-size:18px;}
+.bankDetail td label{ padding-right:5px; float:left; width:29%; }
+.bankDetail td span{ float:left; width:69%;}
+
+
+
+
+/*   5a) pop-up csss add here  */
+#colorbox{outline: none;}
+#cboxLoadedContent #homer{	
+    background:none!important;
+    padding: 10px 0 0 0 !important;
+}
+
+#cboxLoadedContent #homer strong{
+    display: inline-block;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#cboxLoadedContent {
+    height: auto !important;
+    width: 100% !important;
+}
+#cboxContent{
+    border:1px solid #c6c6c6;
+    font-size: 15px;
+    background:#ffffff;
+    padding:13px 20px 10px;
+    position: relative;
+    box-shadow:0 0 8px #000;
+}
+
+#cboxClose{
+    background:url('../images/cross.png') center 6px no-repeat;
+    border: 1px solid #000;
+    border-radius: 50%;
+    color: #000000;
+    cursor: pointer;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    text-indent: -9999px;
+    top: 10px;
+    width: 25px;
+}
+.donate-heading .lang {
+    float: right;
+    width: 52px;
+    margin-right: 13px;
+}
+/*   5b) Loader Image  */
+
+.loader { margin:2% 0 2% 40%; display:inline-block; text-align: center;
+          width:150px; height:150px;}
+.noresult{
+    text-align:center; padding:50px 0; font-weight:bold;
+}
+
+#popupWait{
+    display:none;left:40%;top:30%;width: 25%;height:25%;padding:50px;border:solid 10px #dfdfdf;z-index:+9999;
+    position:fixed;background-color: #ffffff;color:#666666;
+}
+
+
+
+/*
+6.) Responsive for Tablet Mode 
+-------------------------------------*/
+@media all and (max-width:800px){
+    .transaction-container{	margin:25px auto;}
+    .choose-pricing .btn{ margin-bottom:12px;}
+    
+}
+@media all and (max-width:767px){
+    .container{
+        padding: 0 15px;
+    }
+    .personal-detail input[type="text"],.chzn-container,.month, .cvn,.month select, .cvn select,.pay-mod span,
+    #cardVeriNum,.select-payment-container .row{
+        width:100% !important; 
+    }
+    #currency_chzn,#currency{
+        width:280px !important;
+    }
+.personal-detail input[type="text"]{
+        margin-bottom:10px;
+    }
+
+    #expMonth_chzn{
+        margin-right:0 !important;
+    }
+    .donate-heading h2,#num_cycle_chzn{
+        text-indent:0; margin-bottom:12px;
+    }
+    .donate-heading .lang{
+        margin-right:37px;
+    }
+    .money-donate{
+        font-size:32px;
+    }
+  .radio-wrapper.pay,#expYear_chzn,.cvn,#s_pay,#s_bank,#add-note{
+        margin-top:12px;
+    }
+    .pay-mod span,#cardVeriNum{
+        box-sizing:border-box;  -webkit-box-sizing:border-box; 
+    }
+    .select-payment-container .row,.transaction-row .transaction-details{
+        padding-bottom:20px;
+    }
+    .transition-content,.transition-detail{
+        width:100%; box-sizing:border-box;
+    }
+    .donate-value-section a{
+        padding:10px 5px;
+    }
+    .cvn{
+        margin-top:26px; position: relative;
+    }
+    .tooltip-hover{
+        left: -31px;    top: -209px;
+    }
+    .transaction-content-wrapper,.header-transition,.donate-heading,.form-content{
+        padding:25px 15px;
+    }
+    .name-trans h3{
+        font-size: 16px;
+    }
+    .search-btn{ bottom:20px;}
+    #datepicker, #datepicker1{
+        background-position:97% center;
+    }
+}
+/*
+7.) Responsive for Mobile Mode 
+-------------------------------------*/
+@media all and (max-width:480px){
+    .header-content-middle .logo {
+        margin-top: 0px;
+    }
+    #currency_chzn,#currency{
+        width:240px !important;
+    }
+    .donate-heading .lang{
+        float:none; text-align:center; width: 100%; margin-right:0;
+    }
+    #tech_msdd{ width:100px !important; 
+                margin:0 auto;
+                text-align:left;}
+    .payment-success-box{
+        padding-top:44px;
+    }
+    .payment-fail h2, .payment-success-box h2{
+        font-size:35px;
+    }
+    .donate-value-section a.last{
+        border-left:1px solid #cdcdcd !important;
+    }
+    .donate-value-section span a{
+        margin-top:0;
+    }
+    .donate-value-section .right{
+        float:left !important;
+    }
+    .radio-wrapper.pay{
+        margin-top:2px;
+    }
+    .pay-mod span{
+        margin-top:5px;
+    }
+    .donate-value-section a,.donate-value-section .right,.radio-wrapper,.radio-wrapper.req input[type="radio"]{
+        width:100% !important; box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;
+    }
+    .personal-detail{
+        margin-top:8px;
+    }
+    h3.pay-mode-heading{
+    	padding-bottom:10px;
+    }
+    #cycle_div{ padding-top:5px;
+    }
+    .date-wrapper{
+        padding-top:0px;
+    }
+    .cvn{
+        margin-top:26px; position: relative;
+    }
+    .tooltip-hover{
+        left:-8%;
+        top: -209px;
+    }
+    .tooltip-hover img{ width:260px;}
+    #creMsg{
+        line-height:1.3;
+    }
+    .header-transition h2,.search-transaction,.search-transaction input[type="text"],
+    .price-box-trans,.transaction-details,.name-trans,.pay-mod-trans,.selectator ,.filter-btn,.transaction-content-wrapper select { 
+        width:100%; float:none;
+    }
+    .header-transition h2{ 
+        margin-bottom:10px;
+    }
+    .price-box-trans{ 
+        margin-bottom:15px;
+    }
+    .name-trans .email-order{ 
+        position: static; margin-top:4px;
+    }
+    .pay-mod-trans{ margin-top:0;}
+    .transaction-content-wrapper select,.transaction-content-wrapper .right, .chzn-drop{ 
+        width:100% !important; 
+    }
+    .radio-wrapper{ display:block;}
+    .transition-content{ padding:25px 5px;}
+}
+
+
+
